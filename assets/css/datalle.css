@@ -1,0 +1,239 @@
+@font-face {
+font-family: 'Netflix';
+src: url('../../fonts/AvenirNextLTPro-Regular.otf');
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Netflix';
+src: url('../../fonts/AvenirNextLTPro-Bold.otf');
+font-weight: 700;
+font-style: normal;
+}
+body {
+   background: black;
+    color: white;
+    margin: 0;
+    padding-bottom: 108px;
+    font-family: Netflix;
+}
+ 
+.container {
+    width: auto;
+    margin: 0 auto;
+}
+
+.right-text {
+text-align: right;
+margin-right: 20px;
+
+}
+
+
+.banner {
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.banner img {
+    width: 98%;
+    height: auto;
+    display: block;
+    position: flex;
+    margin-bottom: -10%;
+    margin-left: 1%;
+    margin-top: 1%;
+    
+}
+
+a {
+    color: white;
+    font-family: Netflix;
+    
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.play-button-hover {
+    opacity: 1;
+}
+
+.label {
+    color: white;
+    background: transparent;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.details {
+    padding: 20px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.info {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #aaa;
+}
+
+.status {
+    margin: 15px 0;
+    gap: 10px;
+    color: whitesmoke;
+}
+
+.buttons button{ 
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 1.5%;
+    margin-top: -2%;
+    margin-bottom: 1%;
+}
+
+.buttons button:hover {
+    background: #b20710;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-left: 1.5%;
+}
+   
+
+.meta {
+    font-size: 14px;
+    color: #ccc;
+    margin-left: 1.5%;
+}
+
+.meta strong {
+    color: #fff
+;
+}
+
+.icon-plus::before {
+}
+.icon-play.button::before {
+background: url(../../images/icons/play.svg);
+
+}
+.icon-info::before {
+    background: url(../../images/icons/download.svg);
+} 
+
+.list-content {
+    white-space: nowrap;
+    overflow-x: auto;
+  
+
+}
+.list-item {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.list-item:first-child {
+    margin: 0;
+}
+
+.list {
+    padding: 0 1em;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer {
+    border: 1px solid transparent;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    left: 0;
+    right: 0;
+    background:  black;
+    padding: 1em 0 0;    
+}
+
+.tab-list {
+    border: 1px red;
+    margin: 0;
+    padding: 0 ;
+    display: grid;
+    grid-auto-flow: column;
+    list-style: none;
+    padding-bottom: 1em;
+    
+}
+
+.tab-list a {
+    color: #6e6e6e;
+}
+
+.tab-item {
+    text-align: center;
+    font-size: .9em;
+    
+}
+
+.tab-item svg {
+    display: block;
+    margin: auto;
+}
+
+.tab-item path {
+    fill: #6e6e6e;
+}
+
+.tab-item:hover :is(path, span) {
+    fill: white;
+    color: white;
+}
+
+@keyframes water-drop {
+   0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+        70% {transform: scale(0.98); }
+     100% { transform: scale(1); }
+}
+
+.list-item img {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 12px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.list-item img:hover {
+    animation: water-drop 0.8s ease-in-out;
+}
